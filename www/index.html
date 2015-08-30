@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="fw">
+<head>
+	<meta charset="UTF-8">
+	<title>FW</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+<body ng-controller="fwMain">
+	<header>
+		<ul id="slide-out" class="side-nav">
+    		<li><a class="header--link-profile" class="truncate" href="#!"><img class="header--ava" src="http://cs618024.vk.me/v618024803/18cf1/TdQ_GNQ1dSQ.jpg" alt=""> Евгений Завалишин</a></li>
+    		<li class="divider"></li>
+    		<li><a class="truncate" href="#/screen"><i class="material-icons left">dashboard</i>Главный экран</a></li>
+    		<li class="divider"></li>
+    		<li><a class="truncate" href="#/screen"><i class="material-icons left">add</i>Добавить</a></li>
+    		<li class="divider"></li>
+    		<li><a class="truncate" href="#/help"><i class="material-icons left">help</i>Помощь</a></li>
+    		<li><a class="truncate" href="#/feedback"><i class="material-icons left">feedback</i>Обратная связь</a></li>
+    		<li class="divider"></li>
+    		<li><a class="truncate" href="#!"><i class="material-icons left">exit_to_app</i>Выйти</a></li>
+
+  		</ul>
+  		<a href="#" data-activates="slide-out" class="button-collapse show-on-large header--menu"><i class="mdi-navigation-menu"></i></a>
+	</header>
+	
+	<ng-view style="width:100%;height:auto"></ng-view>
+	
+	<footer>
+		
+	</footer>
+	<script src="http://yastatic.net/angularjs/1.3.16/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.3.6/angular-route.min.js"></script>
+	<script src="http://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</body>
+</html>

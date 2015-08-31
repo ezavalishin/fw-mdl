@@ -30,3 +30,19 @@ var Screen = function(){
 		$(".cell").height(Math.floor(self.widthScreen/self.number*self.height));
 	};
 }
+
+var Tabs = function(){
+	self = this;
+
+	this.init = function(){
+		$("#tab1").show();
+		$("#openTab1").click(function(){
+			$("#tab2").hide();
+			$("#tab1").show();
+		});
+		$("#openTab2").click(function(){
+			$("#tab1").hide();
+			$("#tab2").show();
+		});
+	}	
+}

@@ -54,5 +54,6 @@ fw.controller('feedbackCtrl', ['$scope','$http', function($scope,$http){
 }]);
 
 fw.controller('regCtrl', ['$scope','$http', function($scope,$http){
-	
+	$scope.showTab1 = true;
+	$scope.showTab2 = false;
 }]);

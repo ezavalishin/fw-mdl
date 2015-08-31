@@ -1,6 +1,9 @@
 .clear{
 	clear: both;
 }
+.ng-hide{
+	display: none;
+}
 body{
 	//background: url(http://img2.goodfon.ru/original/1920x1200/9/24/kartina-smena-fon.jpg) top center;
 	font-weight: 300;
@@ -16,12 +19,22 @@ header{
 		position: fixed;
 		top:15px;
 		left:15px;
-		border-radius: 50%;
-		transition: opacity 0.5s ease-out 0s;
+		border-radius: 25px;
+		transition: all 0.1s ease-out 0s;
 		z-index: 3;
+		width:50px;
+		height: 47px;
+		overflow: hidden;
 
+		span{
+			display: none;
+		}
 		&:hover{
-			opacity: 1;
+			opacity: 0.9;
+			width:150px;
+			span{
+				display: inline-block;
+			}
 		}
 	}
 
@@ -112,6 +125,13 @@ section.reg{
 	margin-top:100px;
 	color:white;
 	text-shadow:0 1px 0 rgba(0,0,0,0.35);
+
+	.reg--tabs{
+		margin-top: 20px;
+	}
+	a.active{
+		border-bottom:3px solid lighten(rgb(255,0,0),20%);
+	}
 }
 
 
@@ -119,67 +139,44 @@ section.reg{
 
 /* label color */
    .input-field label {
-     color: white;
+     color: white !important;
    }
    /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: white;
-   }
-   .input-field input[type=email]:focus + label {
-     color: white;
+   .input-field input:focus + label {
+     color: white !important;
    }
    .input-field textarea:focus + label {
      color: white !important;
    }
    /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 white;
-   }
-   .input-field input[type=email]:focus {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 white;
-   }
-   .input-field input[type=text]{
-     border-bottom: 1px solid darken(#fff,20%);
-     box-shadow: 0 1px 0 0 darken(#fff,20%);
-   }
-
-   .input-field textarea{
-     border-bottom: 1px solid darken(#fff,20%);
-     box-shadow: 0 1px 0 0 darken(#fff,20%);
-   }
-   .input-field input[type=email]{
-     border-bottom: 1px solid darken(#fff,20%);
-     box-shadow: 0 1px 0 0 darken(#fff,20%);
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 white;
-   }
-   .input-field input[type=text].valid:focus {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 white;
-   }
-   .input-field input[type=email].valid {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 white;
-   }
-   .input-field input[type=email].valid:focus {
+   .input-field input:focus {
      border-bottom: 1px solid white !important;
      box-shadow: 0 1px 0 0 white !important;
    }
-   .input-field textarea:focus {
+   .input-field input{
+     border-bottom: 1px solid darken(#fff,20%) !important;
+     box-shadow: 0 1px 0 0 darken(#fff,20%) !important;
+   }
+
+   .input-field textarea{
+     border-bottom: 1px solid darken(#fff,20%) !important;
+     box-shadow: 0 1px 0 0 darken(#fff,20%) !important;
+   }
+   /* valid color */
+   .input-field input.valid {
+     border-bottom: 1px solid white !important;
+     box-shadow: 0 1px 0 0 white !important;
+   }
+   .input-field input.valid:focus {
      border-bottom: 1px solid white !important;
      box-shadow: 0 1px 0 0 white !important;
    }
    /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid red;
-     box-shadow: 0 1px 0 0 red;
+   .input-field input.invalid {
+     border-bottom: 1px solid red !important;
+     box-shadow: 0 1px 0 0 red !important;
    }
    /* icon prefix focus color */
    .input-field .prefix.active {
-     color: white;
+     color: white !important;
    }
